@@ -1,2 +1,2 @@
-# VideoProgressor
-Customize the HTML5 video progress control.
+# VideoControl
+Customize the HTML5 video control.
