@@ -4,10 +4,28 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
         <title>demo</title>
+        <script src="./video-control.js" charset="utf-8"></script>
+        <style>
+            #video1 {}
+            #mask {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 10;
+            }
+        </style>
     </head>
     <body>
-        <video src="" autoplay poster="">
-
-        </video>
+        <video id="video1" src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+        <div id="mask"></div>
+        <script type="text/javascript">
+            window.onload = function () {
+                var $video1 = document.getElementById('video1');
+                var $container = document.getElementById('mask');
+                var control = new VideoControl($video1, {
+                    container: $container
+                });
+            };
+        </script>
     </body>
 </html>
