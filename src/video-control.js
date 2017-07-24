@@ -1,5 +1,15 @@
 var document = window.document;
 
+var addCssRule = function (selectorString, styleString) {
+    if (window.document.getElementsByTagName('style').length === 0) {
+        var tempStyle = window.document.createElement('style');
+        tempStyle.setAttribute('type', 'text/css');
+        window.document.getElementsByTagName('head')[0].appendChild(tempStyle);
+    }
+
+    window.document.getElementsByTagName('style')[0].appendChild(window.document.createTextNode(selectorString + '{' + styleString + '}'));
+};
+
 var control = function ($video, option) {
     var $container = option.container || $video.parentElement;
 
