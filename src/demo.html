@@ -17,14 +17,13 @@
     </head>
     <body>
         <video id="video1" src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
-        <div id="mask"></div>
         <script type="text/javascript">
             window.onload = function () {
                 var $video1 = document.getElementById('video1');
-                var $container = document.getElementById('mask');
-                var control = new VideoControl($video1, {
-                    container: $container
-                });
+                var control = new VideoControl($video1, {});
+                // $video1.addEventListener('click', function (e) {
+                //     control.show();
+                // }, false);
             };
         </script>
     </body>
