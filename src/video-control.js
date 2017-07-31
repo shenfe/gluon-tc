@@ -13,6 +13,10 @@ var addCssRule = function (selectorString, styleString) {
 var control = function ($video, option) {
     var $container = option.container || $video.parentElement;
 
+    ensure_styles: {
+        
+    }
+
     ensure_elements: {
         var $progressBar = document.createElement('div');
         var $progressDot = document.createElement('div');
