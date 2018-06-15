@@ -1,0 +1,8 @@
+.idea
+.vscode
+
+*.pyc
+.DS_Store
+
+w2v/*.dat
+*.bak
