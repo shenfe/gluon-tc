@@ -1,6 +1,9 @@
 # coding: utf8
 
 import csv
+import sys
+if sys.version_info > (3, 0):
+    from functools import reduce
 
 import mxnet as mx
 from mxnet import nd
@@ -8,7 +11,7 @@ from mxnet import nd
 
 def read(path):
     data = []
-    with open(path) as f:
+    with open(path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
             data.append([row['text'], row['data'].split(' '), row['label']])
@@ -16,7 +19,7 @@ def read(path):
 
 
 def reads(*paths):
-    return reduce(lambda x, y: x + y, map(read, paths))
+    return reduce(lambda x, y: x + y, list(map(read, paths)))
 
 
 def try_gpu():

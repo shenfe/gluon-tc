@@ -1,4 +1,4 @@
-# coding: utf-8
+# coding: utf8
 
 from mxnet import autograd, gluon, init, metric, nd
 from mxnet.gluon import loss as gloss, nn, rnn

@@ -1,4 +1,4 @@
-# coding: utf-8
+# coding: utf8
 
 import collections
 from helper import reads, try_gpu
