@@ -24,19 +24,18 @@ class MyModel(nn.Block):
         return outputs
 
 
-num_outputs = 2
-lr = 0.1
-num_epochs = 20
-batch_size = 10
-embed_size = 100
-num_hiddens = 100
-num_layers = 2
-bidirectional = True
-
 from corpus import vocab, ctx
 from embedding import embed
 
+
+num_outputs = 2
+lr = 0.2
+num_epochs = 100
+batch_size = 16
 embed_size = embed.vec_len
+num_hiddens = 200
+num_layers = 2
+bidirectional = True
 
 net = MyModel(vocab, embed_size, num_hiddens, num_layers, bidirectional)
 net.initialize(init.Xavier(), ctx=ctx)
