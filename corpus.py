@@ -10,9 +10,9 @@ from mxnet import nd
 1. load train and test data
 """
 
-train_data = reads(*['dataset/sex_comment_12_tj_cozd_%s.csv' % str(label) for label in [2, 1, 0]])
+test_data = reads(*['dataset/sex_comment_12_tj_cozd_%s.csv' % str(label) for label in [2, 1, 0]])
 
-test_data = reads(*['dataset/sex_comment_huoshan_fk_%s.csv' % str(label) for label in [0, 1, 2]])
+train_data = reads(*['dataset/sex_comment_huoshan_fk_%s.csv' % str(label) for label in [0, 1, 2]])
 # print('train_data[0]', train_data[0])
 # print('train_data[10]', train_data[10])
 # print('train_data[100]', train_data[100])
