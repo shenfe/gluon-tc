@@ -1,0 +1,11 @@
+{
+  "embeddings": [
+    {
+      "tensorName": "Iris",
+      "tensorShape": [150, 4],
+      "tensorPath": "oss_data/iris_tensors.bytes",
+      "metadataPath": "oss_data/iris_labels.tsv"
+    }
+  ],
+  "modelCheckpointPath": "Demo datasets"
+}

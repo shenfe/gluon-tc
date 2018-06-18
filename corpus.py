@@ -90,7 +90,7 @@ def pad_samples(features, maxlen=100, padding=0):
     return padded_features
 
 
-_sample_size = 25
+_sample_size = 50
 
 
 ctx = try_gpu()
