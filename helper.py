@@ -2,7 +2,9 @@
 
 import csv
 import sys
+py3 = False
 if sys.version_info > (3, 0):
+    py3 = True
     from functools import reduce
 
 import mxnet as mx
@@ -11,7 +13,7 @@ from mxnet import nd
 
 def read(path):
     data = []
-    with open(path, 'r', encoding='utf-8') as f:
+    with open(path, 'r') if not py3 else open(path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
             data.append([row['text'], row['data'].split(' '), row['label']])
