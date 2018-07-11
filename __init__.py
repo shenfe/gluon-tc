@@ -1,5 +1,4 @@
 # coding: utf8
 
-from train import train as process_fit
-from eval import eval_single as single_data_score, eval_batch as process_batch_score
+from rtc import process_fit, single_data_score, process_batch_score, process_batch_highlight, sample, merge, count, gen_tsv
 
