@@ -6,4 +6,4 @@ mxnet==1.2.0
 numpy==1.14.5
 requests==2.18.4
 urllib3==1.22
-wheel==0.24.0
+wheel==0.38.1
